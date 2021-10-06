@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+header {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+textarea {
+    padding: 10px;
+    border-width: thin;
+    min-height: 2vh;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    width: 40vw;
+    height: 4vh;
+    margin: 4px;
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #282c34;
+    margin: 30px 30px;
+    max-width: 24vw;
+    min-height: 24vh;
+    color: white;
+    transition: 0.4s ease-out;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-items {
+    padding: 5px;
+}
+.clickable {
+    cursor:pointer;
+}
+.clickable:hover {
+    opacity: 0.8;
+}
+
+.card:hover {
+
+    transform: translateY(20px);
+    opacity: 0.8;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+.float-left {
+    float: left;
+}
+
+.App-header {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #282c34;
+    font-size: calc(10px + 3vmin);
+    color: white;
+    font-size: xx-large;
+  }
+
+  .min-height-header {
+    min-height: 8vh;
+  }
+  .open-sans {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: nowrap;
+  }  
+  .flex-prop {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+  }
+  .post-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .margin-top {
+    margin-top: 2vh;
+    
+  }
+
+  .circle-bg {
+
+  }
+
+  #app {
+    text-align: center;
+      
+  }
+
+  button {
+    background-color:#3c487d;
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 19px;
+    border-width: 0;
+    border-color: #3c487d;
+    padding: 8px;
+  /* font-family: 'Roboto', sans-serif; */
+  }
+  
+@media screen and (max-width: 968px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #282c34;
+        margin: 30px 30px;
+        max-width: 100%;
+        min-height: 32vh;
+        color: white;
+        transition: 0.4s ease-out;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+    }
+    .card:hover {
+        transform: translateY(20px);
+        opacity: 0.8;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+
+      }  
+      .flex-prop {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    
+      }
+      .flex-prop-main {
+        justify-content: center;
+        
+      }
+      .min-height-header {
+        min-height: 16vh;
+      }
+      .font-size {
+        font-size: small;
+      }
+}
+
+.width-4 {
+    width: 4vw;
+}
+
+.width-10 {
+    width: 10vw;
+}
+
+.add {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-top-1 {
+    margin-top: 1vh;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.margin-30 {
+    margin: 0 30px;
+}
