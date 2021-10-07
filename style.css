@@ -12,10 +12,11 @@ header {
     font-family: 'Open Sans', sans-serif;
 
 }
+
 textarea {
     padding: 10px;
     border-width: thin;
-    min-height: 2vh;
+    min-height: 5vh;
     border-radius: 8px;
     font-family: 'Open Sans', sans-serif;
     width: 40vw;
@@ -27,7 +28,6 @@ textarea {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
-    background-color: #282c34;
     margin: 30px 30px;
     max-width: 24vw;
     min-height: 24vh;
@@ -67,7 +67,6 @@ textarea {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #282c34;
     font-size: calc(10px + 3vmin);
     color: white;
     font-size: xx-large;
@@ -128,13 +127,12 @@ textarea {
   }
 
   button {
-    background-color:#3c487d;
     color: white;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     border-radius: 19px;
     border-width: 0;
-    border-color: #3c487d;
+    border-color: #576CA8;
     padding: 8px;
   /* font-family: 'Roboto', sans-serif; */
   }
@@ -150,7 +148,6 @@ textarea {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 16px;
         text-align: center;
-        background-color: #282c34;
         margin: 30px 30px;
         max-width: 100%;
         min-height: 32vh;
@@ -216,4 +213,44 @@ textarea {
 
 .margin-30 {
     margin: 0 30px;
+}
+
+.margin-10 {
+    margin: 0 10px;
+}
+
+.round-btn {
+    width: 4vw;
+    height: 4.5vh;
+    border-radius: 32px;
+}
+
+.username {
+    width: 10vw;
+    color: white;
+    height: 11vh;
+    align-items: center;
+    align-content: stretch;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 14px;
+    border-radius: 82px;
+}
+
+.margin-15-30 {
+    margin: 15px 30px;
+}
+body {
+    background-color: #e4eaf1;
+}
+
+.bg-dark {
+    background-color: #13293D;
+}
+
+.bg-buttons {
+    background-color:#316B83;
+    border-color: #316B83;
+
 }
