@@ -117,10 +117,6 @@ textarea {
     
   }
 
-  .circle-bg {
-
-  }
-
   #app {
     text-align: center;
       
@@ -136,6 +132,78 @@ textarea {
     padding: 8px;
   /* font-family: 'Roboto', sans-serif; */
   }
+
+  .username {
+    width: 10vw;
+    color: white;
+    height: 11vh;
+    align-items: center;
+    align-content: stretch;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 14px;
+    border-radius: 82px;
+}
+
+
+.width-4 {
+    width: 4vw;
+}
+
+.width-10 {
+    width: 10vw;
+}
+
+.add {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-top-1 {
+    margin-top: 1vh;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.margin-30 {
+    margin: 0 30px;
+}
+
+.margin-10 {
+    margin: 0 10px;
+}
+
+.round-btn {
+    width: 4vw;
+    height: 4.5vh;
+    border-radius: 32px;
+}
+
+
+
+.margin-15-30 {
+    margin: 15px 30px;
+}
+body {
+    background-color: #e4eaf1;
+}
+
+.bg-dark {
+    background-color: #13293D;
+}
+
+.bg-buttons {
+    background-color:#316B83;
+    border-color: #316B83;
+
+}
   
 @media screen and (max-width: 968px) {
     .grid-container {
@@ -184,73 +252,22 @@ textarea {
       .font-size {
         font-size: small;
       }
-}
 
-.width-4 {
-    width: 4vw;
-}
-
-.width-10 {
-    width: 10vw;
-}
-
-.add {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
-}
-
-.margin-top-1 {
-    margin-top: 1vh;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.margin-30 {
-    margin: 0 30px;
-}
-
-.margin-10 {
-    margin: 0 10px;
-}
-
-.round-btn {
-    width: 4vw;
-    height: 4.5vh;
-    border-radius: 32px;
-}
-
-.username {
-    width: 10vw;
-    color: white;
-    height: 11vh;
-    align-items: center;
-    align-content: stretch;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 14px;
-    border-radius: 82px;
-}
-
-.margin-15-30 {
-    margin: 15px 30px;
-}
-body {
-    background-color: #e4eaf1;
-}
-
-.bg-dark {
-    background-color: #13293D;
-}
-
-.bg-buttons {
-    background-color:#316B83;
-    border-color: #316B83;
-
+      .username {
+        width: 16vw;
+        color: white;
+        height: 11vh;
+        align-items: center;
+        align-content: stretch;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 14px;
+        border-radius: 82px;
+    }
+    .round-btn {
+        width: 6vw;
+        height: 4.5vh;
+        border-radius: 32px;
+    }
 }
