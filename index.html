@@ -4,55 +4,59 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <link rel="stylesheet" href="font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="app">
             
-            <header class="App-header min-height-header flex flex-prop padding-left-header font-size">
-                <div>Lendbox Project<i class="fa fa-camera-retro"></i></div>
+            <header class="App-header bg-dark min-height-header flex flex-prop padding-left-header font-size">
+                <div>Lendbox Project</div>
             </header>
             <main id="body">
                 <div v-if="home">
                     <div class="grid-container">
-                        <div v-for="user in users" v-on:click="getPosts(user.id)" class="grid-items clickable card">{{ user.name }}</div>
+                        <div v-for="user in users" v-on:click="getPosts(user.id)" class="grid-items clickable card bg-dark">
+                            <div><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i></div>
+                            <div class="margin-top">{{ user.name }}</div>
+                        </div>
                     </div>
                 </div>
 
                 <div v-if="posts.length > 0" class="">
-                    <div class="flex align-start margin-30">
+                    <div class="flex align-start margin-30 username bg-dark margin-15-30">
+                        <div>
+                            <i class="fa fa-slideshare" aria-hidden="true"></i>
+                        </div>
                         <div class="open-sans margin-top" v-if="currUser">
                             {{currUser.name}}
                         </div>
-                        <div class="open-sans float-left">
-                            <h1>Posts</h1>
-                        </div>
+                        
                     </div>
                     <div class="flex">
                         
-                        <div class="post-card" v-for="(post,ind) in posts" class="" v-bind:key="'post-'+ind">
+                        <div class="post-card" v-for="(post,ind) in posts" class="" v-bind:key="'post-'+currUser.id+ind">
                             <div>
                                 {{post.title}}
-                                <button class="clickable" v-on:click="likePost(currUser.id, ind)">Like</button>
+                                <!-- <button class="clickable bg-buttons" v-on:click="likePost(currUser.id, ind)">{{post.likes}}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> -->
                             </div>
                             <div class="add">
-                                <textarea v-model="postIDs[ind]" placeholder="add comment..."></textarea>
-                                <button class="clickable" v-on:click="postComment(post.id, postIDs[ind])">Add comment</button>
+                                <textarea v-model="postIDs[post.id]" placeholder="Reply..."></textarea>
+                                <button class="margin-10 round-btn bg-buttons clickable" v-on:click="postComment(post.id, postIDs[post.id])"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </div>
-                            <div class="margin-top-1">
-                                <button class="clickable" v-on:click="getComments(post.id)">View Comments</button>
-                                <div v-if="comments.length > 0">
-                                        <div v-for="(comment,index) in comments" v-bind:key="'comment-'+index">{{comment.body}}</div>
+                            <div v-if="comments">
+                                <div class="margin-top-1">
+                                    <button class="clickable bg-buttons" v-on:click="getComments(post.id)">View Comments</button>
+                                </div>
+                                <div v-if="post_id == post.id" class="post margin-top-1">
+                                    <div class="margin-top-1" v-for="(comment, index) in comments[currUser.id][parseInt(post_id)]" v-bind:key="'comment-'+post.id+index">{{comment.body}}</div>
                                 </div>
                             </div>
-        
                         </div>
-                        
                     </div>
                     <div class="add">
-                        <textarea class="input-field" v-model="postIDs[postIDs.length]" placeholder="add Post..."></textarea>
-                        <button class="clickable" v-on:click="newPost(currUser.id, postIDs[postIDs.length])">Add Post</button>
+                        <textarea class="input-field" v-model="new_post" placeholder="add Post..."></textarea>
+                        <button class="clickable bg-buttons" v-on:click="newPost(currUser.id, new_post)">Add Post</button>
                     </div>
                 </div>
             </main>
