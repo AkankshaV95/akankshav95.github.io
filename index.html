@@ -1,17 +1,17 @@
 <html>
     <head>
-        <title>Project</title>
+        <title>Lendbox</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+        <!-- <link rel="stylesheet" href="font-awesome/css/font-awesome.css"> -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="app">
             
             <header class="App-header bg-dark min-height-header flex flex-prop padding-left-header font-size">
-                <div>Lendbox Project</div>
+                <div>Project Lendbox</div>
             </header>
             <main id="body">
                 <div v-if="home">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                <div v-if="posts.length > 0" class="">
+                <div v-if="Object.keys(currUser).length > 0"  class="">
                     <div class="flex align-start margin-30 username bg-dark margin-15-30">
                         <div>
                             <i class="fa fa-slideshare" aria-hidden="true"></i>
@@ -33,7 +33,7 @@
                         </div>
                         
                     </div>
-                    <div class="flex">
+                    <div v-if="posts.length > 0"  class="flex">
                         
                         <div class="post-card" v-for="(post,ind) in posts" class="" v-bind:key="'post-'+currUser.id+ind">
                             <div>
@@ -61,7 +61,7 @@
                 </div>
             </main>
         </div>
-        
+        <script src="https://use.fontawesome.com/b61e6066ca.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
